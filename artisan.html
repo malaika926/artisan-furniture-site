@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Artisan Furniture | Handcrafted Luxury</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>
+tailwind.config={
+theme:{
+extend:{
+colors:{
+primary:'#8B4513',
+secondary:'#D2B48C'
+},
+borderRadius:{
+'none':'0px',
+'sm':'4px',
+DEFAULT:'8px',
+'md':'12px',
+'lg':'16px',
+'xl':'20px',
+'2xl':'24px',
+'3xl':'32px',
+'full':'9999px',
+'button':'8px'
+}
+}
+}
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Poppins', sans-serif;
+scroll-behavior: smooth;
+}
+h1, h2, h3, h4 {
+font-family: 'Playfair Display', serif;
+}
+.hero-section {
+background-image: url('https://readdy.ai/api/search-image?query=Elegant%20modern%20living%20room%20interior%20with%20luxury%20furniture%2C%20natural%20light%20streaming%20through%20large%20windows%2C%20neutral%20color%20palette%20with%20warm%20wood%20tones%2C%20minimalist%20design%20aesthetic%2C%20high-end%20materials%2C%20spacious%20and%20airy%20atmosphere%2C%20styled%20with%20subtle%20decorative%20elements%2C%20soft%20lighting%2C%20no%20people%20visible&width=1920&height=1080&seq=1&orientation=landscape');
+background-size: cover;
+background-position: right center;
+}
+.hero-content {
+background: linear-gradient(90deg, rgba(255,255,255,0.95) 50%, rgba(255,255,255,0) 100%);
+}
+input[type="range"]::-webkit-slider-thumb {
+-webkit-appearance: none;
+appearance: none;
+width: 18px;
+height: 18px;
+border-radius: 50%;
+background: #8B4513;
+cursor: pointer;
+}
+input[type="range"]::-moz-range-thumb {
+width: 18px;
+height: 18px;
+border-radius: 50%;
+background: #8B4513;
+cursor: pointer;
+}
+.custom-checkbox {
+display: inline-block;
+position: relative;
+padding-left: 30px;
+cursor: pointer;
+}
+.custom-checkbox input {
+position: absolute;
+opacity: 0;
+cursor: pointer;
+}
+.checkmark {
+position: absolute;
+top: 0;
+left: 0;
+height: 20px;
+width: 20px;
+border: 2px solid #8B4513;
+border-radius: 4px;
+}
+.custom-checkbox input:checked ~ .checkmark:after {
+content: "";
+position: absolute;
+display: block;
+left: 6px;
+top: 2px;
+width: 5px;
+height: 10px;
+border: solid #8B4513;
+border-width: 0 2px 2px 0;
+transform: rotate(45deg);
+}
+.switch {
+position: relative;
+display: inline-block;
+width: 48px;
+height: 24px;
+}
+.switch input {
+opacity: 0;
+width: 0;
+height: 0;
+}
+.slider {
+position: absolute;
+cursor: pointer;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: #ccc;
+transition: .4s;
+border-radius: 24px;
+}
+.slider:before {
+position: absolute;
+content: "";
+height: 18px;
+width: 18px;
+left: 3px;
+bottom: 3px;
+background-color: white;
+transition: .4s;
+border-radius: 50%;
+}
+input:checked + .slider {
+background-color: #8B4513;
+}
+input:checked + .slider:before {
+transform: translateX(24px);
+}
+</style>
+</head>
+<body class="bg-white">
+<!-- Sticky Navigation -->
+<header class="fixed w-full bg-white shadow-sm z-50">
+<div class="container mx-auto px-6 py-4 flex justify-between items-center">
+<a href="#" class="text-4xl font-['Dancing_Script'] font-bold tracking-normal text-primary">Artisan</a>
+<nav class="hidden md:flex space-x-8">
+<a href="#home" class="text-gray-800 hover:text-primary font-medium transition">Home</a>
+<a href="#products" class="text-gray-800 hover:text-primary font-medium transition">Products</a>
+<a href="#about" class="text-gray-800 hover:text-primary font-medium transition">About</a>
+<a href="#contact" class="text-gray-800 hover:text-primary font-medium transition">Contact</a>
+</nav>
+<div class="flex items-center space-x-4">
+<button class="w-10 h-10 flex items-center justify-center text-gray-700 hover:text-primary">
+<i class="ri-search-line ri-lg"></i>
+</button>
+<button class="w-10 h-10 flex items-center justify-center text-gray-700 hover:text-primary">
+<i class="ri-user-line ri-lg"></i>
+</button>
+<button class="w-10 h-10 flex items-center justify-center text-gray-700 hover:text-primary relative">
+<i class="ri-shopping-cart-line ri-lg"></i>
+<span class="absolute -top-1 -right-1 bg-primary text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">3</span>
+</button>
+<button class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700">
+<i class="ri-menu-line ri-lg"></i>
+</button>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section id="home" class="hero-section min-h-screen flex items-center pt-16">
+<div class="hero-content w-full py-20 px-6">
+<div class="container mx-auto">
+<div class="max-w-xl">
+<h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">Crafting Timeless Furniture for Modern Living</h1>
+<p class="text-lg text-gray-700 mb-8">Discover our handcrafted collection where traditional craftsmanship meets contemporary design. Each piece tells a story of quality and elegance.</p>
+<div class="flex flex-wrap gap-4">
+<a href="#products" class="px-8 py-3 bg-primary text-white font-medium rounded-button hover:bg-opacity-90 transition shadow-md whitespace-nowrap !rounded-button">Shop Collection</a>
+<a href="#about" class="px-8 py-3 border border-gray-300 text-gray-800 font-medium rounded-button hover:border-primary hover:text-primary transition whitespace-nowrap !rounded-button">Learn More</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Product Categories -->
+<section id="products" class="py-20 px-6 bg-gray-50">
+<div class="container mx-auto">
+<div class="text-center mb-12">
+<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Explore Our Collections</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">Browse through our carefully curated furniture categories, each designed to transform your space with elegance and functionality.</p>
+</div>
+<!-- Filter Options -->
+<div class="flex justify-center mb-10">
+<div class="inline-flex bg-white rounded-full p-1 shadow-sm">
+<button class="px-6 py-2 rounded-full bg-primary text-white font-medium whitespace-nowrap">All</button>
+<button class="px-6 py-2 rounded-full text-gray-700 hover:bg-gray-100 font-medium whitespace-nowrap">Living Room</button>
+<button class="px-6 py-2 rounded-full text-gray-700 hover:bg-gray-100 font-medium whitespace-nowrap">Bedroom</button>
+<button class="px-6 py-2 rounded-full text-gray-700 hover:bg-gray-100 font-medium whitespace-nowrap">Dining</button>
+<button class="px-6 py-2 rounded-full text-gray-700 hover:bg-gray-100 font-medium whitespace-nowrap">Office</button>
+</div>
+</div>
+<!-- Categories Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Living Room -->
+<div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition group">
+<div class="h-64 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=Modern%20elegant%20living%20room%20with%20minimalist%20sofa%2C%20coffee%20table%2C%20and%20decorative%20elements.%20Warm%20neutral%20color%20palette%2C%20stylish%20lighting%20fixtures%2C%20wooden%20accents%2C%20and%20tasteful%20decor.%20Clean%20lines%20and%20contemporary%20design%20aesthetic.%20No%20people%20visible.&width=600&height=400&seq=2&orientation=landscape" alt="Living Room Furniture" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500">
+</div>
+<div class="p-6">
+<h3 class="text-xl font-semibold text-gray-900 mb-2">Living Room</h3>
+<p class="text-gray-600 mb-4">Create a welcoming space with our stylish sofas, coffee tables, and accent pieces.</p>
+<a href="#" class="inline-flex items-center text-primary font-medium hover:underline">
+View Collection
+<i class="ri-arrow-right-line ri-lg ml-2"></i>
+</a>
+</div>
+</div>
+<!-- Bedroom -->
+<div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition group">
+<div class="h-64 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=Luxurious%20bedroom%20with%20elegant%20bed%20frame%2C%20nightstands%2C%20and%20dresser.%20Soft%20neutral%20tones%2C%20plush%20bedding%2C%20ambient%20lighting%2C%20and%20tasteful%20decor.%20Wooden%20elements%2C%20clean%20lines%2C%20and%20sophisticated%20design%20aesthetic.%20No%20people%20visible.&width=600&height=400&seq=3&orientation=landscape" alt="Bedroom Furniture" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500">
+</div>
+<div class="p-6">
+<h3 class="text-xl font-semibold text-gray-900 mb-2">Bedroom</h3>
+<p class="text-gray-600 mb-4">Transform your bedroom into a sanctuary with our elegant beds, dressers, and nightstands.</p>
+<a href="#" class="inline-flex items-center text-primary font-medium hover:underline">
+View Collection
+<i class="ri-arrow-right-line ri-lg ml-2"></i>
+</a>
+</div>
+</div>
+<!-- Dining -->
+<div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition group">
+<div class="h-64 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=Elegant%20dining%20area%20with%20wooden%20table%2C%20matching%20chairs%2C%20and%20stylish%20lighting%20fixture.%20Natural%20materials%2C%20warm%20tones%2C%20sophisticated%20tableware%2C%20and%20minimal%20decor.%20Clean%20lines%20and%20timeless%20design%20aesthetic.%20No%20people%20visible.&width=600&height=400&seq=4&orientation=landscape" alt="Dining Furniture" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500">
+</div>
+<div class="p-6">
+<h3 class="text-xl font-semibold text-gray-900 mb-2">Dining</h3>
+<p class="text-gray-600 mb-4">Gather around our handcrafted dining tables and chairs for memorable meals with loved ones.</p>
+<a href="#" class="inline-flex items-center text-primary font-medium hover:underline">
+View Collection
+<i class="ri-arrow-right-line ri-lg ml-2"></i>
+</a>
+</div>
+</div>
+<!-- Office -->
+<div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition group">
+<div class="h-64 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=Modern%20home%20office%20with%20wooden%20desk%2C%20ergonomic%20chair%2C%20and%20stylish%20storage%20solutions.%20Natural%20light%2C%20minimalist%20decor%2C%20functional%20organization%2C%20and%20elegant%20design%20elements.%20Warm%20wood%20tones%20and%20neutral%20color%20palette.%20No%20people%20visible.&width=600&height=400&seq=5&orientation=landscape" alt="Office Furniture" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500">
+</div>
+<div class="p-6">
+<h3 class="text-xl font-semibold text-gray-900 mb-2">Office</h3>
+<p class="text-gray-600 mb-4">Enhance productivity with our functional yet beautiful desks, chairs, and storage solutions.</p>
+<a href="#" class="inline-flex items-center text-primary font-medium hover:underline">
+View Collection
+<i class="ri-arrow-right-line ri-lg ml-2"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section id="about" class="py-20 px-6">
+<div class="container mx-auto">
+<div class="flex flex-col lg:flex-row items-center gap-12">
+<div class="lg:w-1/2">
+<img src="https://readdy.ai/api/search-image?query=Artisan%20craftsman%20working%20on%20wooden%20furniture%20in%20a%20workshop.%20Natural%20light%2C%20wood%20shavings%2C%20traditional%20tools%2C%20and%20work%20in%20progress.%20Skilled%20hands%20creating%20fine%20furniture.%20Warm%20tones%2C%20authentic%20craftsmanship%20environment.%20Focus%20on%20the%20crafting%20process.&width=700&height=500&seq=6&orientation=landscape" alt="Furniture Craftsman" class="w-full h-auto rounded-lg shadow-lg">
+</div>
+<div class="lg:w-1/2">
+<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Our Story & Craftsmanship</h2>
+<p class="text-gray-700 mb-6">Founded in 2005, our journey began with a simple passion: creating furniture that stands the test of time. What started as a small workshop has grown into a beloved brand, but our commitment to quality has never wavered.</p>
+<p class="text-gray-700 mb-8">Each piece in our collection is handcrafted by skilled artisans using traditional techniques passed down through generations. We carefully select sustainable materials, paying attention to every joint, curve, and finish to ensure exceptional quality and durability.</p>
+<div class="grid grid-cols-2 gap-6 mb-8">
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-secondary bg-opacity-20 rounded-full text-primary mr-4">
+<i class="ri-award-line ri-lg"></i>
+</div>
+<div>
+<h3 class="font-semibold text-gray-900 mb-1">Premium Materials</h3>
+<p class="text-sm text-gray-600">Ethically sourced, highest quality</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-secondary bg-opacity-20 rounded-full text-primary mr-4">
+<i class="ri-tools-line ri-lg"></i>
+</div>
+<div>
+<h3 class="font-semibold text-gray-900 mb-1">Master Craftsmanship</h3>
+<p class="text-sm text-gray-600">Skilled artisans with decades of experience</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-secondary bg-opacity-20 rounded-full text-primary mr-4">
+<i class="ri-recycle-line ri-lg"></i>
+</div>
+<div>
+<h3 class="font-semibold text-gray-900 mb-1">Sustainability</h3>
+<p class="text-sm text-gray-600">Eco-friendly practices and materials</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-secondary bg-opacity-20 rounded-full text-primary mr-4">
+<i class="ri-shield-check-line ri-lg"></i>
+</div>
+<div>
+<h3 class="font-semibold text-gray-900 mb-1">Lifetime Warranty</h3>
+<p class="text-sm text-gray-600">Our quality promise to you</p>
+</div>
+</div>
+</div>
+<a href="#contact" class="px-8 py-3 bg-primary text-white font-medium rounded-button hover:bg-opacity-90 transition shadow-md inline-block whitespace-nowrap !rounded-button">Get in Touch</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Products -->
+<section class="py-20 px-6 bg-gray-50">
+<div class="container mx-auto">
+<div class="text-center mb-12">
+<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Featured Products</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">Discover our most popular pieces, each representing the perfect blend of form and function.</p>
+</div>
+<div class="relative">
+<div class="flex overflow-x-auto pb-8 hide-scrollbar space-x-6">
+<!-- Product 1 -->
+<div class="min-w-[280px] max-w-[280px] bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+<div class="h-64 overflow-hidden relative group">
+<img src="https://readdy.ai/api/search-image?query=Modern%20minimalist%20wooden%20armchair%20with%20clean%20lines%2C%20natural%20finish%2C%20and%20comfortable%20cushions.%20Neutral%20fabric%2C%20elegant%20design%2C%20high-quality%20craftsmanship.%20Studio%20lighting%2C%20plain%20background%2C%20product%20photography%20style.&width=400&height=400&seq=7&orientation=squarish" alt="Wooden Armchair" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500">
+<div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<button class="w-10 h-10 flex items-center justify-center bg-white rounded-full text-primary mx-1 hover:bg-primary hover:text-white transition !rounded-full">
+<i class="ri-eye-line"></i>
+</button>
+<button class="w-10 h-10 flex items-center justify-center bg-white rounded-full text-primary mx-1 hover:bg-primary hover:text-white transition !rounded-full">
+<i class="ri-heart-line"></i>
+</button>
+</div>
+</div>
+<div class="p-4">
+<h3 class="text-lg font-semibold text-gray-900 mb-1">Oakwood Armchair</h3>
+<div class="flex items-center mb-2">
+<div class="flex text-yellow-400">
+<i class="ri-star-fill ri-sm"></i>
+<i class="ri-star-fill ri-sm"></i>
+<i class="ri-star-fill ri-sm"></i>
+<i class="ri-star-fill ri-sm"></i>
+<i class="ri-star-half-fill ri-sm"></i>
+</div>
+<span class="text-xs text-gray-500 ml-2">(42 reviews)</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-lg font-bold text-gray-900">$599</span>
+<button class="w-10 h-10 flex items-center justify-center bg-primary text-white rounded-full hover:bg-opacity-90 transition !rounded-full">
+<i class="ri-shopping-cart-line"></i>
+</button>
+</div>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="min-w-[280px] max-w-[280px] bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+<div class="h-64 overflow-hidden relative group">
+<img src="https://readdy.ai/api/search-image?query=Elegant%20wooden%20dining%20table%20with%20smooth%20surface%2C%20natural%20grain%20patterns%2C%20and%20sturdy%20legs.%20High-quality%20craftsmanship%2C%20warm%20wood%20tones%2C%20minimalist%20design.%20Studio%20lighting%2C%20plain%20background%2C%20product%20photography%20style.&width=400&height=400&seq=8&orientation=squarish" alt="Dining Table" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500">
+<div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<button class="w-10 h-10 flex items-center justify-center bg-white rounded-full text-primary mx-1 hover:bg-primary hover:text-white transition !rounded-full">
+<i class="ri-eye-line"></i>
+</button>
+<button class="w-10 h-10 flex items-center justify-center bg-white rounded-full text-primary mx-1 hover:bg-primary hover:text-white transition !rounded-full">
+<i class="ri-heart-line"></i>
+</button>
+</div>
+</div>
+<div class="p-4">
+<h3 class="text-lg font-semibold text-gray-900 mb-1">Walnut Dining Table</h3>
+<div class="flex items-center mb-2">
+<div class="flex text-yellow-400">
+<i class="ri-star-fill ri-sm"></i>
+<i class="ri-star-fill ri-sm"></i>
+<i class="ri-star-fill ri-sm"></i>
+<i class="ri-star-fill ri-sm"></i>
+<i class="ri-star-fill ri-sm"></i>
+</div>
+<span class="text-xs text-gray-500 ml-2">(68 reviews)</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-lg font-bold text-gray-900">$1,299</span>
+<button class="w-10 h-10 flex items-center justify-center bg-primary text-white rounded-full hover:bg-opacity-90 transition !rounded-full">
+<i class="ri-shopping-cart-line"></i>
+</button>
+</div>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="min-w-[280px] max-w-[280px] bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+<div class="h-64 overflow-hidden relative group">
+<img src="https://readdy.ai/api/search-image?query=Modern%20bookshelf%20with%20multiple%20compartments%2C%20clean%20lines%2C%20and%20natural%20wood%20finish.%20Functional%20design%2C%20high-quality%20craftsmanship%2C%20warm%20tones.%20Studio%20lighting%2C%20plain%20background%2C%20product%20photography%20style.&width=400&height=400&seq=9&orientation=squarish" alt="Bookshelf" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500">
+<div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<button class="w-10 h-10 flex items-center justify-center bg-white rounded-full text-primary mx-1 hover:bg-primary hover:text-white transition !rounded-full">
+<i class="ri-eye-line"></i>
+</button>
+<button class="w-10 h-10 flex items-center justify-center bg-white rounded-full text-primary mx-1 hover:bg-primary hover:text-white transition !rounded-full">
+<i class="ri-heart-line"></i>
+</button>
+</div>
+</div>
+<div class="p-4">
+<h3 class="text-lg font-semibold text-gray-900 mb-1">Maple Bookshelf</h3>
+<div class="flex items-center mb-2">
+<div class="flex text-yellow-400">
+<i class="ri-star-fill ri-sm"></i>
+<i class="ri-star-fill ri-sm"></i>
+<i class="ri-star-fill ri-sm"></i>
+<i class="ri-star-fill ri-sm"></i>
+<i class="ri-star-line ri-sm"></i>
+</div>
+<span class="text-xs text-gray-500 ml-2">(35 reviews)</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-lg font-bold text-gray-900">$849</span>
+<button class="w-10 h-10 flex items-center justify-center bg-primary text-white rounded-full hover:bg-opacity-90 transition !rounded-full">
+<i class="ri-shopping-cart-line"></i>
+</button>
+</div>
+</div>
+</div>
+<!-- Product 4 -->
+<div class="min-w-[280px] max-w-[280px] bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+<div class="h-64 overflow-hidden relative group">
+<img src="https://readdy.ai/api/search-image?query=Elegant%20bed%20frame%20with%20headboard%2C%20natural%20wood%20finish%2C%20clean%20lines%2C%20and%20solid%20construction.%20High-quality%20craftsmanship%2C%20warm%20tones%2C%20minimalist%20design.%20Studio%20lighting%2C%20plain%20background%2C%20product%20photography%20style.&width=400&height=400&seq=10&orientation=squarish" alt="Bed Frame" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500">
+<div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<button class="w-10 h-10 flex items-center justify-center bg-white rounded-full text-primary mx-1 hover:bg-primary hover:text-white transition !rounded-full">
+<i class="ri-eye-line"></i>
+</button>
+<button class="w-10 h-10 flex items-center justify-center bg-white rounded-full text-primary mx-1 hover:bg-primary hover:text-white transition !rounded-full">
+<i class="ri-heart-line"></i>
+</button>
+</div>
+</div>
+<div class="p-4">
+<h3 class="text-lg font-semibold text-gray-900 mb-1">Cherry Wood Bed Frame</h3>
+<div class="flex items-center mb-2">
+<div class="flex text-yellow-400">
+<i class="ri-star-fill ri-sm"></i>
+<i class="ri-star-fill ri-sm"></i>
+<i class="ri-star-fill ri-sm"></i>
+<i class="ri-star-fill ri-sm"></i>
+<i class="ri-star-half-fill ri-sm"></i>
+</div>
+<span class="text-xs text-gray-500 ml-2">(51 reviews)</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-lg font-bold text-gray-900">$1,499</span>
+<button class="w-10 h-10 flex items-center justify-center bg-primary text-white rounded-full hover:bg-opacity-90 transition !rounded-full">
+<i class="ri-shopping-cart-line"></i>
+</button>
+</div>
+</div>
+</div>
+<!-- Product 5 -->
+<div class="min-w-[280px] max-w-[280px] bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+<div class="h-64 overflow-hidden relative group">
+<img src="https://readdy.ai/api/search-image?query=Modern%20coffee%20table%20with%20wooden%20top%20and%20metal%20legs%2C%20clean%20lines%2C%20natural%20finish%2C%20and%20minimalist%20design.%20High-quality%20craftsmanship%2C%20warm%20tones.%20Studio%20lighting%2C%20plain%20background%2C%20product%20photography%20style.&width=400&height=400&seq=11&orientation=squarish" alt="Coffee Table" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500">
+<div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<button class="w-10 h-10 flex items-center justify-center bg-white rounded-full text-primary mx-1 hover:bg-primary hover:text-white transition !rounded-full">
+<i class="ri-eye-line"></i>
+</button>
+<button class="w-10 h-10 flex items-center justify-center bg-white rounded-full text-primary mx-1 hover:bg-primary hover:text-white transition !rounded-full">
+<i class="ri-heart-line"></i>
+</button>
+</div>
+</div>
+<div class="p-4">
+<h3 class="text-lg font-semibold text-gray-900 mb-1">Modern Coffee Table</h3>
+<div class="flex items-center mb-2">
+<div class="flex text-yellow-400">
+<i class="ri-star-fill ri-sm"></i>
+<i class="ri-star-fill ri-sm"></i>
+<i class="ri-star-fill ri-sm"></i>
+<i class="ri-star-fill ri-sm"></i>
+<i class="ri-star-line ri-sm"></i>
+</div>
+<span class="text-xs text-gray-500 ml-2">(29 reviews)</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-lg font-bold text-gray-900">$499</span>
+<button class="w-10 h-10 flex items-center justify-center bg-primary text-white rounded-full hover:bg-opacity-90 transition !rounded-full">
+<i class="ri-shopping-cart-line"></i>
+</button>
+</div>
+</div>
+</div>
+</div>
+<button class="absolute top-1/2 -left-4 transform -translate-y-1/2 w-10 h-10 flex items-center justify-center bg-white rounded-full shadow-md text-gray-700 hover:text-primary z-10 !rounded-full">
+<i class="ri-arrow-left-s-line ri-lg"></i>
+</button>
+<button class="absolute top-1/2 -right-4 transform -translate-y-1/2 w-10 h-10 flex items-center justify-center bg-white rounded-full shadow-md text-gray-700 hover:text-primary z-10 !rounded-full">
+<i class="ri-arrow-right-s-line ri-lg"></i>
+</button>
+</div>
+</div>
+</section>
+<!-- Customer Trust Elements -->
+<section class="py-20 px-6">
+<div class="container mx-auto">
+<div class="text-center mb-12">
+<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">What Our Customers Say</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">Hear from our satisfied customers about their experience with our furniture and service.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+<!-- Testimonial 1 -->
+<div class="bg-white p-8 rounded-lg shadow-md">
+<div class="flex text-yellow-400 mb-4">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+</div>
+<p class="text-gray-700 mb-6">"The quality of my new dining set exceeded my expectations. The craftsmanship is exceptional, and it's clear that every detail was carefully considered. It's not just furniture; it's a work of art that my family will enjoy for generations."</p>
+<div class="flex items-center">
+<div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 mr-4">
+<i class="ri-user-line ri-lg"></i>
+</div>
+<div>
+<h4 class="font-semibold text-gray-900">Emily Richardson</h4>
+<p class="text-sm text-gray-500">New York, NY</p>
+</div>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="bg-white p-8 rounded-lg shadow-md">
+<div class="flex text-yellow-400 mb-4">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+</div>
+<p class="text-gray-700 mb-6">"I've furnished my entire home with pieces from this collection, and I couldn't be happier. The customer service was outstanding from start to finish, and the delivery team was professional and careful. Every piece is exactly as beautiful as it appeared online."</p>
+<div class="flex items-center">
+<div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 mr-4">
+<i class="ri-user-line ri-lg"></i>
+</div>
+<div>
+<h4 class="font-semibold text-gray-900">Michael Thompson</h4>
+<p class="text-sm text-gray-500">Austin, TX</p>
+</div>
+</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="bg-white p-8 rounded-lg shadow-md">
+<div class="flex text-yellow-400 mb-4">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-half-fill"></i>
+</div>
+<p class="text-gray-700 mb-6">"The bookshelf I purchased is not only functional but a stunning focal point in my living room. Friends always comment on its beauty. The wood grain is gorgeous, and the construction is solid. Worth every penny for a piece that will last a lifetime."</p>
+<div class="flex items-center">
+<div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 mr-4">
+<i class="ri-user-line ri-lg"></i>
+</div>
+<div>
+<h4 class="font-semibold text-gray-900">Sophia Martinez</h4>
+<p class="text-sm text-gray-500">Chicago, IL</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Trust Badges -->
+<div class="bg-white p-8 rounded-lg shadow-md">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="text-center">
+<div class="w-16 h-16 mx-auto bg-secondary bg-opacity-20 rounded-full flex items-center justify-center text-primary mb-4">
+<i class="ri-truck-line ri-2x"></i>
+</div>
+<h3 class="font-semibold text-gray-900 mb-2">Free Shipping</h3>
+<p class="text-sm text-gray-600">On all orders over $1000</p>
+</div>
+<div class="text-center">
+<div class="w-16 h-16 mx-auto bg-secondary bg-opacity-20 rounded-full flex items-center justify-center text-primary mb-4">
+<i class="ri-shield-check-line ri-2x"></i>
+</div>
+<h3 class="font-semibold text-gray-900 mb-2">Lifetime Warranty</h3>
+<p class="text-sm text-gray-600">On all our handcrafted pieces</p>
+</div>
+<div class="text-center">
+<div class="w-16 h-16 mx-auto bg-secondary bg-opacity-20 rounded-full flex items-center justify-center text-primary mb-4">
+<i class="ri-recycle-line ri-2x"></i>
+</div>
+<h3 class="font-semibold text-gray-900 mb-2">Sustainable Materials</h3>
+<p class="text-sm text-gray-600">Ethically sourced and eco-friendly</p>
+</div>
+<div class="text-center">
+<div class="w-16 h-16 mx-auto bg-secondary bg-opacity-20 rounded-full flex items-center justify-center text-primary mb-4">
+<i class="ri-refresh-line ri-2x"></i>
+</div>
+<h3 class="font-semibold text-gray-900 mb-2">30-Day Returns</h3>
+<p class="text-sm text-gray-600">Hassle-free return policy</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section id="contact" class="py-20 px-6 bg-gray-50">
+<div class="container mx-auto">
+<div class="flex flex-col lg:flex-row gap-12">
+<div class="lg:w-1/2">
+<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Get in Touch</h2>
+<p class="text-gray-700 mb-8">Have questions about our products or services? Fill out the form, and our team will get back to you as soon as possible.</p>
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label for="name" class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+<input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Your name">
+</div>
+<div>
+<label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+<input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Your email">
+</div>
+</div>
+<div>
+<label for="subject" class="block text-sm font-medium text-gray-700 mb-2">Subject</label>
+<input type="text" id="subject" class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="How can we help?">
+</div>
+<div>
+<label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+<textarea id="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Your message"></textarea>
+</div>
+<div class="flex items-center">
+<label class="custom-checkbox">
+<input type="checkbox">
+<span class="checkmark"></span>
+<span class="ml-2 text-sm text-gray-700">Subscribe to our newsletter for exclusive offers and updates</span>
+</label>
+</div>
+<button type="submit" class="px-8 py-3 bg-primary text-white font-medium rounded-button hover:bg-opacity-90 transition shadow-md whitespace-nowrap !rounded-button">Send Message</button>
+</form>
+</div>
+<div class="lg:w-1/2">
+<div class="bg-white p-8 rounded-lg shadow-md h-full">
+<div class="mb-8">
+<h3 class="text-xl font-semibold text-gray-900 mb-4">Visit Our Showroom</h3>
+<div class="h-64 rounded overflow-hidden mb-4">
+<img src="https://public.readdy.ai/gen_page/map_placeholder_1280x720.png" alt="Store Location" class="w-full h-full object-cover">
+</div>
+<div class="flex items-start mb-4">
+<div class="w-10 h-10 flex items-center justify-center text-primary mr-4">
+<i class="ri-map-pin-line ri-lg"></i>
+</div>
+<div>
+<h4 class="font-semibold text-gray-900">Address</h4>
+<p class="text-gray-600">123 Furniture Avenue, Design District<br>San Francisco, CA 94103</p>
+</div>
+</div>
+<div class="flex items-start mb-4">
+<div class="w-10 h-10 flex items-center justify-center text-primary mr-4">
+<i class="ri-time-line ri-lg"></i>
+</div>
+<div>
+<h4 class="font-semibold text-gray-900">Hours</h4>
+<p class="text-gray-600">Monday - Saturday: 10:00 AM - 7:00 PM<br>Sunday: 11:00 AM - 5:00 PM</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center text-primary mr-4">
+<i class="ri-phone-line ri-lg"></i>
+</div>
+<div>
+<h4 class="font-semibold text-gray-900">Contact</h4>
+<p class="text-gray-600">Phone: (555) 123-4567<br>Email: info@artisanfurniture.com</p>
+</div>
+</div>
+</div>
+<div>
+<h3 class="text-xl font-semibold text-gray-900 mb-4">Follow Us</h3>
+<div class="flex space-x-4">
+<a href="#" class="w-10 h-10 flex items-center justify-center border border-gray-300 rounded-full text-gray-600 hover:border-primary hover:text-primary transition !rounded-full">
+<i class="ri-facebook-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center border border-gray-300 rounded-full text-gray-600 hover:border-primary hover:text-primary transition !rounded-full">
+<i class="ri-instagram-line"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center border border-gray-300 rounded-full text-gray-600 hover:border-primary hover:text-primary transition !rounded-full">
+<i class="ri-pinterest-line"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center border border-gray-300 rounded-full text-gray-600 hover:border-primary hover:text-primary transition !rounded-full">
+<i class="ri-twitter-x-line"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter -->
+<section class="py-16 px-6 bg-primary bg-opacity-10">
+<div class="container mx-auto text-center">
+<h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Subscribe to Our Newsletter</h2>
+<p class="text-gray-700 max-w-2xl mx-auto mb-8">Join our community to receive exclusive offers, early access to new collections, and design inspiration for your home.</p>
+<form class="max-w-md mx-auto flex">
+<input type="email" class="flex-1 px-4 py-3 rounded-l border-y border-l border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Your email address">
+<button type="submit" class="px-6 py-3 bg-primary text-white font-medium rounded-r border border-primary hover:bg-opacity-90 transition whitespace-nowrap !rounded-button">Subscribe</button>
+</form>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-gray-900 text-white pt-16 pb-8 px-6">
+<div class="container mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+<div>
+<a href="#" class="text-4xl font-['Dancing_Script'] font-bold tracking-normal text-white mb-6 inline-block">Artisan</a>
+<p class="text-gray-400 mb-6">Crafting timeless furniture for modern living since 2005. Each piece tells a story of quality, craftsmanship, and sustainable design.</p>
+<div class="flex space-x-4">
+<a href="#" class="w-10 h-10 flex items-center justify-center border border-gray-700 rounded-full text-gray-400 hover:border-white hover:text-white transition !rounded-full">
+<i class="ri-facebook-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center border border-gray-700 rounded-full text-gray-400 hover:border-white hover:text-white transition !rounded-full">
+<i class="ri-instagram-line"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center border border-gray-700 rounded-full text-gray-400 hover:border-white hover:text-white transition !rounded-full">
+<i class="ri-pinterest-line"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center border border-gray-700 rounded-full text-gray-400 hover:border-white hover:text-white transition !rounded-full">
+<i class="ri-twitter-x-line"></i>
+</a>
+</div>
+</div>
+<div>
+<h3 class="text-lg font-semibold mb-6">Quick Links</h3>
+<ul class="space-y-3">
+<li><a href="#home" class="text-gray-400 hover:text-white transition">Home</a></li>
+<li><a href="#products" class="text-gray-400 hover:text-white transition">Products</a></li>
+<li><a href="#about" class="text-gray-400 hover:text-white transition">About Us</a></li>
+<li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition">Blog</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition">FAQ</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-lg font-semibold mb-6">Collections</h3>
+<ul class="space-y-3">
+<li><a href="#" class="text-gray-400 hover:text-white transition">Living Room</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition">Bedroom</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition">Dining</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition">Office</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition">Outdoor</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition">Accessories</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-lg font-semibold mb-6">Customer Service</h3>
+<ul class="space-y-3">
+<li><a href="#" class="text-gray-400 hover:text-white transition">Shipping & Returns</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition">Warranty Information</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition">Care Instructions</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition">Terms & Conditions</a></li>
+</ul>
+</div>
+</div>
+<div class="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
+<p class="text-gray-500 mb-4 md:mb-0">© 2025 Artisan Furniture. All rights reserved.</p>
+<div class="flex items-center space-x-4">
+<i class="ri-visa-fill ri-lg text-gray-400"></i>
+<i class="ri-mastercard-fill ri-lg text-gray-400"></i>
+<i class="ri-paypal-fill ri-lg text-gray-400"></i>
+<i class="ri-amazon-pay-fill ri-lg text-gray-400"></i>
+<i class="ri-apple-fill ri-lg text-gray-400"></i>
+</div>
+</div>
+</div>
+</footer>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+anchor.addEventListener('click', function (e) {
+e.preventDefault();
+const target = document.querySelector(this.getAttribute('href'));
+if (target) {
+window.scrollTo({
+top: target.offsetTop - 80,
+behavior: 'smooth'
+});
+}
+});
+});
+});
+document.addEventListener('DOMContentLoaded', function() {
+// Mobile menu toggle
+const menuButton = document.querySelector('.ri-menu-line').parentElement;
+const nav = document.querySelector('nav');
+menuButton.addEventListener('click', function() {
+nav.classList.toggle('hidden');
+nav.classList.toggle('flex');
+nav.classList.toggle('flex-col');
+nav.classList.toggle('absolute');
+nav.classList.toggle('top-16');
+nav.classList.toggle('right-0');
+nav.classList.toggle('bg-white');
+nav.classList.toggle('p-4');
+nav.classList.toggle('shadow-md');
+nav.classList.toggle('rounded-lg');
+nav.classList.toggle('w-48');
+});
+});
+document.addEventListener('DOMContentLoaded', function() {
+// Product carousel navigation
+const carousel = document.querySelector('.overflow-x-auto');
+const leftArrow = document.querySelector('.ri-arrow-left-s-line').parentElement;
+const rightArrow = document.querySelector('.ri-arrow-right-s-line').parentElement;
+leftArrow.addEventListener('click', function() {
+carousel.scrollBy({ left: -300, behavior: 'smooth' });
+});
+rightArrow.addEventListener('click', function() {
+carousel.scrollBy({ left: 300, behavior: 'smooth' });
+});
+});
+</script>
+</body>
+</html>
